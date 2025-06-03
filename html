@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zamanlı ve Skorlu Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <form id="question-form">
+    <input type="text" id="add-question" placeholder="Soru" />
+    <div class="nq-options">
+      <input type="text" class="nq-option" placeholder="Seçenek 1" />
+      <input type="text" class="nq-option" placeholder="Seçenek 2" />
+      <input type="text" class="nq-option" placeholder="Seçenek 3" />
+      <input type="text" class="nq-option" placeholder="Seçenek 4" />
+      <select id="answer">
+        <option disabled selected value="">Doğru cevabı seçin</option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <button type="submit">Soru Ekle</button>
+    </div>
+  </form>
+
+  <div id="quiz-screen" style="display: none;">
+    <h2 id="quiz-question"></h2>
+    <div id="quiz-options"></div>
+    <div id="quiz-info">
+      <span id="quiz-timer">Süre: 10</span>
+      <span id="quiz-score">Skor: 0</span>
+    </div>
+  </div>
+
+  <button id="start-quiz">Quize Başla</button>
+  <div id="result" style="display: none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
